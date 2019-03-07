@@ -1,12 +1,12 @@
 # D&D Player Profile
 So far, we're hosting on Heroku as `quiet-lowlands-76445` and have provisioned a Mongo DB.
 
-## Curl to add contacts
+## Curl to add profiles
 For example:
 
-`curl -H "Content-Type: application/json" -d '{"name":"mLab Support", "email": "support@mlab.com"}' http://quiet-lowlands-76445.herokuapp.com/api/contacts`
+`curl -H "Content-Type: application/json" -d '{"name":"mLab Support", "email": "support@mlab.com"}' http://quiet-lowlands-76445.herokuapp.com/api/profiles`
 
-To see all contacts, navigate to `http://quiet-lowlands-76445.herokuapp.com/api/contacts`.
+To see all profiles, navigate to `http://quiet-lowlands-76445.herokuapp.com/api/profiles`.
 
 ## Development server
 

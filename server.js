@@ -29,7 +29,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:2701
   });
 });
 
-// CONTACTS API ROUTES BELOW
+// PROFILES API ROUTES BELOW
 
 // Generic error handler used by all endpoints.
 function handleError(res, reason, message, code) {
@@ -38,7 +38,7 @@ function handleError(res, reason, message, code) {
 }
 
 app.get("/api/profiles", function(req, res) {
-  db.collection(CONTACTS_COLLECTION).find({}).toArray(function(err, docs) {
+  db.collection(PROFILES_COLLECTION).find({}).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get profiles.");
     } else {
@@ -54,7 +54,7 @@ app.post("/api/profiles", function(req, res) {
   if (!req.body.name) {
     handleError(res, "Invalid user input", "Must provide a name.", 400);
   } else {
-    db.collection(CONTACTS_COLLECTION).insertOne(newProfile, function(err, doc) {
+    db.collection(PROFILES_COLLECTION).insertOne(newProfile, function(err, doc) {
       if (err) {
         handleError(res, err.message, "Failed to create new profile.");
       } else {
