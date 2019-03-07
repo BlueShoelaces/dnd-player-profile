@@ -1,6 +1,12 @@
-# DndPlayerProfile
+# D&D Player Profile
+So far, we're hosting on Heroku as `quiet-lowlands-76445` and have provisioned a Mongo DB.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+## Curl to add contacts
+For example:
+
+`curl -H "Content-Type: application/json" -d '{"name":"mLab Support", "email": "support@mlab.com"}' http://quiet-lowlands-76445.herokuapp.com/api/contacts`
+
+To see all contacts, navigate to `http://quiet-lowlands-76445.herokuapp.com/api/contacts`.
 
 ## Development server
 
